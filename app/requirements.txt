@@ -1,0 +1,7 @@
+fastapi
+redis
+uvicorn
+requests
+uuid
+fake_headers
+schedule

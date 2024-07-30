@@ -1,0 +1,25 @@
+networks:
+  semrush_network:
+   name: 'semrush_network'
+
+services:
+  web:
+    container_name: "semrush"
+    build: ./app
+    networks:
+      - semrush_network   
+    volumes:
+      - ./app:/code
+    ports:
+      - 8887:8000    
+    develop:
+      watch:
+          - action: sync+restart
+            path: .
+            target: /app/main.py  
+
+  redis:
+    container_name: "redisFsAp"
+    image: "redis:alpine"
+    networks:
+      - semrush_network  
