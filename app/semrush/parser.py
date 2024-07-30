@@ -38,7 +38,7 @@ class SemRush:
 
         
         proxies = {
-    'https': 'http://1z8bRM:A1ha8v@138.59.5.67:9124',
+           'https': 'http://1z8bRM:A1ha8v@138.59.5.67:9124',
         } 
         response = requests.post(self.endPoint, cookies=cookies, headers=headers, json=json_data, proxies=proxies)
 
